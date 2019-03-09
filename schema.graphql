@@ -1,0 +1,14 @@
+schema {
+  query: Query
+}
+
+type Query {
+  hello(id: String!): String!
+  people(ids: [String!]!): [Person!]!
+  peopleViaLoader(ids: [String!]!): [Person!]!
+}
+
+type Person {
+  id: String!
+  name: String!
+}
